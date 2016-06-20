@@ -1,7 +1,7 @@
 class CreateTodoItems < ActiveRecord::Migration
   def change
     create_table :todo_items do |t|
-      t.refrences :todo_list
+      t.references :todo_list
       t.string :content
 
       t.timestamps null: false
