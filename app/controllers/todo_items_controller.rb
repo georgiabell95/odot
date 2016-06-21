@@ -22,7 +22,7 @@ class TodoItemsController < ApplicationController
 
   def edit
     @todo_list = TodoList.find(params[:todo_list_id])
-    @todo_item = @todo_list.todo_items.find(parmas [:id])
+    @todo_item = @todo_list.todo_items.find(params[:id])
   end
 
 def update
@@ -35,7 +35,6 @@ def update
         flash[:error] = "That todo item could not be saved."
         render action: :edit
       end
-    end
   end
 
   def url_options
